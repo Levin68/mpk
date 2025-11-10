@@ -1,0 +1,316 @@
+/* assets/css/fab-modal.css */
+
+/* FAB MENU (IG + Pesan Publik) */
+.fab-multi {
+  position: fixed;
+  right: 20px;
+  bottom: 200px;
+  width: 64px;
+  height: 64px;
+  z-index: 260;
+}
+
+.fab-checkbox {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.fab-main {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg,#facc15,#f59e0b);
+  color: #111827;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+  border: 2px solid #111827;
+  transition: all .25s ease;
+}
+
+.fab-main::before {
+  content: "+";
+}
+
+.fab-checkbox:checked ~ .fab-main {
+  transform: rotate(45deg) scale(0.96);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+/* options */
+.fab-option {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #050816;
+  border: 2px solid #facc15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #facc15;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.9);
+  opacity: 0;
+  transform: translateY(0);
+  pointer-events: none;
+  transition: all .26s cubic-bezier(.22,1,.36,1);
+}
+
+.fab-option:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* IG icon */
+.fab-ig-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 2px solid #facc15;
+  position: relative;
+}
+.fab-ig-box::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 2px solid #facc15;
+}
+.fab-ig-box::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  right: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background:#facc15;
+}
+
+/* show options */
+.fab-checkbox:checked ~ .fab-instagram {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-70px);
+  transition-delay: 0.05s;
+}
+
+.fab-checkbox:checked ~ .fab-public {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-140px);
+  transition-delay: 0.10s;
+}
+
+/* FAB ASPIRASI BULAT */
+.fab-aspirasi-main {
+  position: fixed;
+  right: 20px;
+  bottom: 104px;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border-radius: 50%;
+  background: linear-gradient(90deg,#facc15,#f59e0b);
+  color: #111827;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.9);
+  border: none;
+  cursor: pointer;
+  z-index: 259;
+}
+
+.fab-aspirasi-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* MODAL (Aspirasi & Public) */
+.aspirasi-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.86);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 255;
+}
+
+.aspirasi-modal.active {
+  display: flex;
+}
+
+.aspirasi-card {
+  width: 380px;
+  max-width: 94%;
+  padding: 22px 22px 20px;
+  border-radius: 20px;
+  background: radial-gradient(circle at top, rgba(250,204,21,0.06), transparent 90%),
+              #050816;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.95);
+  position: relative;
+  animation: popupFade .28s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+.aspirasi-card-wide {
+  width: 420px;
+  max-width: 96%;
+}
+
+.aspirasi-card h3 {
+  margin: 0 0 6px;
+  color: #facc15;
+  font-size: 22px;
+}
+
+.aspirasi-card .eyebrow {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.aspirasi-card .badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 9px;
+  background: rgba(250,204,21,0.16);
+  color: #facc15;
+}
+
+.aspirasi-card .hint {
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: #d4d4d8;
+}
+
+.aspirasi-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.aspirasi-card label {
+  font-size: 10px;
+  color: #9ca3af;
+  display: block;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px;
+}
+
+.field-wrap {
+  position: relative;
+  margin-top: 3px;
+}
+
+.field-wrap input,
+.field-wrap select,
+.field-wrap textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(148,163,253,0.18);
+  background: #020817;
+  color: #f9fafb;
+  padding: 9px 10px;
+  font-size: 11px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.field-wrap textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.field-focus-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: all .22s ease;
+}
+
+.field-wrap:focus-within .field-focus-glow {
+  border-color: rgba(250,204,21,0.35);
+  box-shadow: 0 0 14px rgba(250,204,21,0.16);
+}
+
+.aspirasi-card button[type="submit"] {
+  margin-top: 8px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#facc15,#f59e0b);
+  color: #111827;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.9);
+}
+
+.aspirasi-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: #facc15;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.status {
+  margin-top: 6px;
+  font-size: 10px;
+  color: #22c55e;
+}
+
+.secure-note {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: #9ca3af;
+}
+
+.secure-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #22c55e;
+}
+
+.secure-label {
+  margin-left: auto;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(22,163,74,0.14);
+  color: #4ade80;
+}

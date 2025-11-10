@@ -1,0 +1,138 @@
+/* assets/css/topbar-hero.css */
+/* Fokus: navbar & header biar gak basic, no font berat tambahan */
+
+/* ===== NAVBAR ===== */
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 62px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 60;
+  background:
+    radial-gradient(circle at top left, rgba(250,204,21,0.06), transparent),
+    radial-gradient(circle at top right, rgba(250,204,21,0.04), transparent),
+    rgba(3,4,10,0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(250,204,21,0.16);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.72);
+}
+
+/* Brand: MPK ZONE */
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.1;
+}
+
+.brand-main {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #facc15;
+}
+
+.brand-sub {
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  color: rgba(209,213,219,0.85);
+  text-transform: uppercase;
+}
+
+/* Toggle menu lebih clean */
+.menu-toggle {
+  width: 32px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: #facc15;
+  box-shadow: 0 0 6px rgba(250,204,21,0.7);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* optional anim pas drawer open (kalau ada class .open di js) */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(9px) rotate(40deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-40deg);
+}
+
+/* Drawer: dark glassy */
+.nav-drawer {
+  position: fixed;
+  top: 62px;
+  right: 14px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top, rgba(250,204,21,0.10), transparent),
+    rgba(3,4,10,0.98);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.92);
+  backdrop-filter: blur(18px);
+}
+
+.nav-drawer a {
+  display: block;
+  padding: 8px 6px;
+  font-size: 11px;
+  color: #e5e5e5;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.nav-drawer a:hover {
+  background: rgba(250,204,21,0.08);
+  color: #facc15;
+  transform: translateX(2px);
+}
+
+/* ===== HERO OFFSET ===== */
+
+/* Karena navbar sekarang fixed, dorong hero dikit ke bawah */
+.hero {
+  padding-top: calc(62px + 26px);
+}
+
+/* Tambah garis halus emas di bawah hero biar transisi ke konten manis */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 54%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0),
+    rgba(250,204,21,0.55),
+    rgba(0,0,0,0)
+  );
+  opacity: 0.9;
+}

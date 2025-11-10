@@ -1,0 +1,50 @@
+:root {
+  --gold: #facc15;
+  --gold-soft: rgba(250,204,21,0.14);
+  --accent: #f59e0b;
+  --bg: #050816;
+  --card-bg: #0b0f19;
+  --text-main: #f9fafb;
+  --text-soft: #9ca3af;
+  --radius-xl: 22px;
+  --radius-lg: 18px;
+  --transition-fast: 0.25s ease;
+  --font-main: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --shadow-soft: 0 18px 45px rgba(0,0,0,0.78);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--transition-fast), transform 0.7s var(--transition-fast);
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

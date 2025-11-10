@@ -1,0 +1,82 @@
+/* assets/css/galeri.css */
+/* Galeri 4:3 landscape auto-slide dengan pembatas */
+
+/* Section wrapper */
+.galeri {
+  padding: 34px 18px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Slider wrapper */
+.galeri-slider {
+  margin-top: 14px;
+  width: 100%;
+  max-width: 960px;
+  border-radius: 20px;
+  padding: 8px 0;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top, rgba(250,204,21,0.04), transparent),
+    rgba(3,4,10,0.98);
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.9);
+  position: relative;
+}
+
+/* Track: 8 item (4 asli + 4 duplikat) = 200% width */
+.galeri-track {
+  display: flex;
+  width: 200%;
+  animation: gallerySlide 6s linear infinite;
+}
+
+/* Tiap kartu */
+.galeri-item {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 0 6px; /* jarak antar foto */
+}
+
+/* Frame 4:3 landscape */
+.galeri-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 */
+  border-radius: 14px;
+  overflow: hidden;
+  background: #020817;
+  box-shadow:
+    inset 0 0 0 1px rgba(250,204,21,0.14),
+    0 6px 14px rgba(0,0,0,0.9);
+}
+
+/* Gambar */
+.galeri-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0.96;
+}
+
+.galeri-frame:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Animasi auto-slide loop mulus */
+@keyframes gallerySlide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Mobile: pelanin sedikit, struktur tetap sama */
+@media (max-width: 768px) {
+  .galeri-track {
+    animation-duration: 7s;
+  }
+}
