@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>MPK ZONE | SMP Tunas Harapan</title>
+
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/landing.css" />
+  <link rel="stylesheet" href="assets/css/hero-upgrade.css" />
+  <link rel="stylesheet" href="assets/css/fab-modal.css" />
+  <link rel="stylesheet" href="assets/css/galeri.css" />
+  <link rel="stylesheet" href="assets/css/loading.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="top-nav">
+    <div class="brand">
+      <span>MPK ZONE</span>
+      <span class="brand-sub">SMP TUNAS HARAPAN</span>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-drawer">
+      <a href="#hero">Beranda</a>
+      <a href="#struktur">Struktur</a>
+      <a href="#galeri">Galeri</a>
+      <a href="aspirasi.html">Aspirasi</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">MAJELIS PERWAKILAN KELAS</div>
+
+        <h1 class="hero-title">
+          <span id="typing"></span><span class="cursor">|</span>
+        </h1>
+
+        <div class="hero-school">SMP TUNAS HARAPAN</div>
+
+        <p class="hero-subtitle">
+          Ruang resmi informasi dan aspirasi siswa SMP Tunas Harapan.
+          Transparan, responsif, dan berkelas dengan nuansa emas.
+        </p>
+
+        <div class="hero-actions">
+          <a href="aspirasi.html" class="btn-primary">Sampaikan Aspirasi</a>
+          <a href="#struktur" class="btn-ghost">Lihat Pengurus</a>
+        </div>
+
+        <div class="hero-scroll-hint">SCROLL KE BAWAH UNTUK LANJUT</div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats section-fade" id="stats">
+      <div class="stats-card">
+        <div class="stat">
+          <div class="stat-label">Aspirasi Online</div>
+          <div class="stat-value">24/7</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Identitas Terlindungi</div>
+          <div class="stat-value">100%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Pengurus Aktif</div>
+          <div class="stat-value">17</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUKTUR -->
+    <section id="struktur" class="struktur section-fade">
+      <h2>Struktur MPK</h2>
+      <p class="section-desc">
+        Susunan pengurus MPK ZONE periode 25–26 yang siap mendengar dan menindaklanjuti aspirasi siswa.
+      </p>
+
+      <div class="structure">
+        <div class="pembina-wrap" id="pembinaGrid"></div>
+        <div class="members" id="memberGrid"></div>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="galeri section-fade">
+      <h2>Galeri Kegiatan</h2>
+      <p class="section-desc">
+        Dokumentasi kegiatan MPK ZONE: musyawarah, sosialisasi, hingga program aksi nyata.
+      </p>
+
+      <div class="galeri-slider">
+        <div class="galeri-track">
+          <!-- 4 foto asli -->
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 1"></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 2"></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 3"></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 4"></div></div>
+          <!-- 4 duplikat (loop halus) -->
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- POPUP BIODATA -->
+  <div class="popup-backdrop" id="popup">
+    <div class="popup-card">
+      <div class="popup-photo" id="popupPhoto"></div>
+      <div class="popup-overlay"></div>
+      <div class="popup-close" id="popupClose">✕</div>
+      <div class="popup-motto" id="popupMotto"></div>
+    </div>
+  </div>
+
+  <!-- FAB MENU (IG + PESAN PUBLIK) -->
+  <div class="fab-multi">
+    <input type="checkbox" id="fab-toggle" class="fab-checkbox" />
+    <label for="fab-toggle" class="fab-main"></label>
+
+    <a href="https://instagram.com/akun_mpkzone"
+       target="_blank"
+       class="fab-option fab-instagram"
+       title="Instagram MPK">
+      <span class="fab-ig-box"></span>
+    </a>
+
+    <button type="button"
+            class="fab-option fab-public"
+            id="fabPublic"
+            title="Pesan Publik">
+      <span class="fab-option-icon">🔊</span>
+    </button>
+  </div>
+
+  <!-- FAB ASPIRASI BULAT -->
+  <button type="button"
+          class="fab-aspirasi-main"
+          id="fabAspirasiMain"
+          title="Kirim Aspirasi">
+    <span class="fab-aspirasi-icon">💬</span>
+  </button>
+
+  <!-- MODAL ASPIRASI -->
+  <div class="aspirasi-modal" id="aspirasiModal">
+    <div class="aspirasi-card aspirasi-card-wide">
+      <button class="aspirasi-close" id="aspirasiClose">✕</button>
+
+      <div class="eyebrow">FORM ASPIRASI RESMI</div>
+      <h3>
+        Aspirasi Siswa
+        <span class="badge">Digital &amp; Rahasia</span>
+      </h3>
+      <p class="hint">
+        Sampaikan aspirasimu dengan jujur, sopan, dan bertanggung jawab.
+        Setiap pesan akan dibaca dan dipertimbangkan langsung oleh MPK.
+      </p>
+
+      <form id="aspirasiForm">
+        <div class="two-col">
+          <label>Nama Lengkap
+            <div class="field-wrap">
+              <input type="text" name="name" placeholder="Nama lengkap sesuai absen" required />
+              <div class="field-focus-glow"></div>
+            </div>
+          </label>
+
+          <label>Kelas
+            <div class="field-wrap">
+              <select name="kelas" required>
+                <option value="">Pilih kelas</option>
+                <optgroup label="Kelas 7">
+                  <option>7.1</option><option>7.2</option><option>7.3</option><option>7.4</option>
+                </optgroup>
+                <optgroup label="Kelas 8">
+                  <option>8.1</option><option>8.2</option><option>8.3</option><option>8.4</option>
+                </optgroup>
+                <optgroup label="Kelas 9">
+                  <option>9.1</option><option>9.2</option><option>9.3</option>
+                </optgroup>
+              </select>
+              <div class="field-focus-glow"></div>
+            </div>
+          </label>
+        </div>
+
+        <label>Email Aktif
+          <div class="field-wrap">
+            <input type="email" name="email" placeholder="Untuk konfirmasi penerimaan aspirasi" required />
+            <div class="field-focus-glow"></div>
+          </div>
+        </label>
+
+        <label>Aspirasi
+          <div class="field-wrap">
+            <textarea name="message" rows="5"
+              placeholder="Tulis saran, kritik membangun, atau ide kegiatan yang ingin kamu sampaikan..."
+              required></textarea>
+            <div class="field-focus-glow"></div>
+          </div>
+        </label>
+
+        <button type="submit" id="sendBtn">
+          <span class="btn-icon">📨</span>
+          <span class="btn-text">Kirim Aspirasi ke MPK</span>
+        </button>
+
+        <p id="status" class="status"></p>
+
+        <div class="secure-note">
+          <div class="secure-dot"></div>
+          <span>Data dijaga rahasia, hanya untuk keperluan verifikasi MPK.</span>
+          <span class="secure-label">Protected</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PESAN PUBLIK -->
+  <div class="aspirasi-modal" id="publicModal">
+    <div class="aspirasi-card aspirasi-card-wide">
+      <button class="aspirasi-close" id="publicClose">✕</button>
+
+      <h3>Pesan Publik</h3>
+      <p class="hint">
+        Pesan ini untuk ditampilkan sebagai pesan publik MPK ZONE.
+      </p>
+
+      <!-- list pesan publik -->
+      <div id="publicMessagesList" class="public-messages"></div>
+
+      <form id="publicForm">
+        <label>Nama / Organisasi
+          <div class="field-wrap">
+            <input type="text" name="nama" placeholder="Contoh: Kelas 9.1 atau Nama Lengkap" required />
+            <div class="field-focus-glow"></div>
+          </div>
+        </label>
+
+        <label>Pesan Publik
+          <div class="field-wrap">
+            <textarea name="pesan" rows="5" placeholder="Tulis pesan publik..." required></textarea>
+            <div class="field-focus-glow"></div>
+          </div>
+        </label>
+
+        <button type="submit">
+          <span class="btn-text">Kirim Pesan Publik</span>
+        </button>
+
+        <p id="publicStatus" class="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer section-fade">
+    <p>© 2025 MPK ZONE · SMP Tunas Harapan · All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/landing.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/fab-modal.js"></script>
+  <script src="assets/js/struktur.js"></script>
+</script>
+</body>
+</html>

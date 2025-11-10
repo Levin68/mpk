@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Aspirasi Siswa | MPK ZONE</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/form.css" />
+</head>
+<body class="aspirasi-body">
+  <header class="top-nav">
+    <div class="brand">MPK ZONE</div>
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-drawer">
+      <a href="index.html#hero">Beranda</a>
+      <a href="index.html#struktur">Struktur</a>
+      <a href="index.html#galeri">Galeri</a>
+      <a href="aspirasi.html">Aspirasi</a>
+    </nav>
+  </header>
+
+  <div class="bg-grid"></div>
+  <div class="bg-orbit">
+    <div class="orbit-circle"></div>
+    <div class="orbit-circle"></div>
+    <div class="orbit-circle"></div>
+  </div>
+
+  <main class="card-aspirasi">
+    <div class="eyebrow">Form Aspirasi Resmi</div>
+    <h1>
+      Aspirasi Siswa
+      <span class="badge">Digital & Rahasia</span>
+    </h1>
+    <p class="hint">
+      Sampaikan aspirasimu dengan jujur, sopan, dan bertanggung jawab.
+      Setiap pesan akan dibaca dan dipertimbangkan langsung oleh MPK.
+    </p>
+
+    <form id="aspirasiForm">
+      <div class="two-col">
+        <label>Nama Lengkap
+          <div class="field-wrap">
+            <input type="text" name="name" placeholder="Nama lengkap sesuai absen" required />
+            <div class="field-focus-glow"></div>
+          </div>
+        </label>
+
+        <label>Kelas
+          <div class="field-wrap">
+            <select name="kelas" required>
+              <option value="">Pilih kelas</option>
+              <optgroup label="Kelas 7">
+                <option>7.1</option>
+                <option>7.2</option>
+                <option>7.3</option>
+                <option>7.4</option>
+              </optgroup>
+              <optgroup label="Kelas 8">
+                <option>8.1</option>
+                <option>8.2</option>
+                <option>8.3</option>
+                <option>8.4</option>
+              </optgroup>
+              <optgroup label="Kelas 9">
+                <option>9.1</option>
+                <option>9.2</option>
+                <option>9.3</option>
+              </optgroup>
+            </select>
+            <div class="field-focus-glow"></div>
+          </div>
+        </label>
+      </div>
+
+      <label>Email Aktif
+        <div class="field-wrap">
+          <input type="email" name="email" placeholder="Untuk konfirmasi penerimaan aspirasi" required />
+          <div class="field-focus-glow"></div>
+        </div>
+      </label>
+
+      <label>Aspirasi
+        <div class="field-wrap">
+          <textarea name="message" rows="5" placeholder="Tulis saran, kritik membangun, atau ide kegiatan yang ingin kamu sampaikan..." required></textarea>
+          <div class="field-focus-glow"></div>
+        </div>
+      </label>
+
+      <button type="submit" id="sendBtn">
+        <span class="btn-icon">📨</span>
+        <span class="btn-text">Kirim Aspirasi ke MPK</span>
+      </button>
+
+      <p id="status" class="status"></p>
+
+      <div class="secure-note">
+        <div class="secure-dot"></div>
+        <span>Data dijaga rahasia, hanya untuk keperluan verifikasi MPK.</span>
+        <span class="secure-label">Protected</span>
+      </div>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/form.js"></script>
+</body>
+</html>
