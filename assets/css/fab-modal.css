@@ -1,6 +1,5 @@
-/* assets/css/fab-modal.css */
+/* ========== FAB MENU (IG + Pesan Publik) ========== */
 
-/* FAB MENU (IG + Pesan Publik) */
 .fab-multi {
   position: fixed;
   right: 20px;
@@ -44,7 +43,8 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
-/* options */
+/* FAB options */
+
 .fab-option {
   position: absolute;
   right: 4px;
@@ -74,6 +74,7 @@
 }
 
 /* IG icon */
+
 .fab-ig-box {
   width: 18px;
   height: 18px;
@@ -81,6 +82,7 @@
   border: 2px solid #facc15;
   position: relative;
 }
+
 .fab-ig-box::before {
   content: "";
   position: absolute;
@@ -88,6 +90,7 @@
   border-radius: 50%;
   border: 2px solid #facc15;
 }
+
 .fab-ig-box::after {
   content: "";
   position: absolute;
@@ -96,10 +99,11 @@
   right: 3px;
   top: 3px;
   border-radius: 50%;
-  background:#facc15;
+  background: #facc15;
 }
 
 /* show options */
+
 .fab-checkbox:checked ~ .fab-instagram {
   opacity: 1;
   pointer-events: auto;
@@ -114,7 +118,8 @@
   transition-delay: 0.10s;
 }
 
-/* FAB ASPIRASI BULAT */
+/* ========== FAB ASPIRASI BULAT ========== */
+
 .fab-aspirasi-main {
   position: fixed;
   right: 20px;
@@ -142,7 +147,8 @@
   line-height: 1;
 }
 
-/* MODAL (Aspirasi & Public) */
+/* ========== MODAL UMUM (Aspirasi & Public) ========== */
+
 .aspirasi-modal {
   position: fixed;
   inset: 0;
@@ -162,8 +168,7 @@
   max-width: 94%;
   padding: 22px 22px 20px;
   border-radius: 20px;
-  background: radial-gradient(circle at top, rgba(250,204,21,0.06), transparent 90%),
-              #050816;
+  background: radial-gradient(circle at top, rgba(250,204,21,0.06), transparent 90%), #050816;
   box-shadow: 0 18px 40px rgba(0,0,0,0.95);
   position: relative;
   animation: popupFade .28s cubic-bezier(.22,1,.36,1) forwards;
@@ -314,3 +319,262 @@
   background: rgba(22,163,74,0.14);
   color: #4ade80;
 }
+
+/* ========== PESAN PUBLIK (MODAL) ========== */
+
+#publicModal .aspirasi-card-wide {
+  width: 95%;
+  max-width: 620px;
+  border-radius: 24px;
+  padding: 22px 22px 20px;
+  background: radial-gradient(circle at top left, rgba(250,204,21,0.04), transparent 55%), #020817;
+  border: 1px solid rgba(148,163,253,0.08);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#publicModal h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #facc15;
+}
+
+#publicModal .hint {
+  margin: 4px 0 10px;
+  font-size: 12px;
+  color: #cbd5f5;
+}
+
+/* list pesan */
+
+.public-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.public-messages::-webkit-scrollbar {
+  width: 4px;
+}
+.public-messages::-webkit-scrollbar-thumb {
+  background: rgba(148,163,253,0.25);
+  border-radius: 999px;
+}
+
+/* bubble: 2 kolom */
+
+.public-bubble {
+  display: flex;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 16px;
+  background: rgba(10,12,22,0.98);
+  border: 1px solid rgba(75,85,99,0.6);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.85);
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+/* kiri: avatar + nama */
+
+.public-bubble-left {
+  flex-shrink: 0;
+  width: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.public-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #111827;
+  color: #facc15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.public-name {
+  font-size: 9px;
+  font-weight: 600;
+  color: #fde68a;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* kanan: isi pesan */
+
+.public-bubble-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  border-left: 1px solid rgba(148,163,253,0.15);
+}
+
+.public-text {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #e5e7eb;
+  margin: 0 0 3px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.public-meta {
+  font-size: 9px;
+  color: #9ca3af;
+  text-align: right;
+}
+
+/* form input bawah */
+
+#publicForm {
+  margin-top: 12px;
+  padding: 12px 14px 10px;
+  border-radius: 16px;
+  background: rgba(10,12,22,0.95);
+  border: 1px solid rgba(75,85,99,0.6);
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#publicForm label {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-left: 4px;
+}
+
+#publicForm .field-wrap {
+  background: rgba(6,9,18,0.96);
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,253,0.15);
+  padding: 6px 12px;
+}
+
+#publicForm input,
+#publicForm textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f3f4f6;
+  font-size: 13px;
+  resize: none;
+  padding: 6px 0;
+}
+
+#publicForm textarea {
+  min-height: 50px;
+  border-radius: 8px;
+}
+
+#publicForm button[type="submit"] {
+  align-self: flex-end;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #111827;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(250,204,21,0.4);
+}
+
+#publicForm button[type="submit"]:active {
+  transform: scale(0.93);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.7);
+}
+
+/* ==== PEMBATAS & PEMBEDA KOLOM NAMA vs PESAN ==== */
+
+/* jadikan bubble berbasis grid: kiri (nama) fix, kanan fleksibel */
+.public-bubble{
+  display:grid;
+  grid-template-columns: 78px 1fr; /* kiri fix, kanan fleksibel */
+  gap:10px;
+  align-items: stretch;
+  padding:10px; /* rapih sama */
+}
+
+/* kolom kiri: kotak kecil untuk avatar+nama */
+.public-bubble-left{
+  width:auto;                /* ikut grid */
+  padding:8px 6px;
+  border-radius:12px;
+  background:rgba(17,24,39,0.65); /* panel kecil agar beda */
+  border:1px solid rgba(148,163,253,0.18);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+}
+
+/* nama dipertegas */
+.public-name{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:#fde68a;
+  text-transform:uppercase;
+  text-align:center;
+}
+
+/* kolom kanan: isi + waktu, ada garis vertikal pemisah */
+.public-bubble-right{
+  position:relative;
+  padding-left:14px;         /* ruang untuk garis */
+}
+
+/* separator vertikal tebal + glow tipis */
+.public-bubble-right::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:4px;
+  bottom:4px;
+  width:2px;                 /* tebal pemisah */
+  border-radius:2px;
+  background:
+    linear-gradient(180deg, rgba(148,163,253,.55), rgba(250,204,21,.55));
+  box-shadow:0 0 10px rgba(250,204,21,.15);
+}
+
+/* isi & waktu rapih */
+.public-text{ margin:0 0 4px; line-height:1.5; }
+.public-meta{ margin-top:2px; }
+
+/* responsif: di layar kecil banget, kiri dipersempit */
+@media (max-width:380px){
+  .public-bubble{ grid-template-columns: 68px 1fr; }
+  .public-bubble-left{ padding:6px 5px; }
+}
+
+/* biar item terakhir tetap ada radius bawah */
+.public-messages > .public-bubble:last-child{
+  border-bottom-left-radius:16px;
+  border-bottom-right-radius:16px;
+}
+
+
+
+/* ========== POPUP DETAIL PESAN & KOMENTAR (struktur HTML sudah ada) ========== */
+/* kalau mau dipoles lagi nanti kita lanjut, sekarang fokus list utama dulu */

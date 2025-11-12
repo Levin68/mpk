@@ -1,0 +1,95 @@
+/* ===== MPK ZONE – FAQ Mini (checkbox accordion, smooth) ===== */
+
+.faq-mini{
+  margin:36px auto 8px;max-width:980px;padding:18px 16px;border-radius:20px;
+  background:radial-gradient(circle at top left,rgba(250,204,21,.06),transparent 65%),#020817;
+  border:1px solid rgba(148,163,253,.10);box-shadow:0 16px 34px rgba(0,0,0,.85);
+}
+.faq-mini h2{margin:0 0 8px;color:#facc15;font-size:22px;letter-spacing:.02em}
+.faq-mini .section-desc{color:#cbd5e1;font-size:13px;margin:0 0 14px}
+
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{
+  position:relative;border:1px solid rgba(148,163,253,.16);border-radius:16px;
+  background:rgba(3,7,18,.96);transition:border-color .25s,box-shadow .25s;
+  overflow:hidden;will-change:box-shadow,border-color;
+}
+.faq-item:hover{border-color:rgba(250,204,21,.28);box-shadow:0 12px 28px rgba(0,0,0,.55)}
+.faq-item.is-hidden{display:none}
+
+.faq-question{
+  position:relative;z-index:1;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;
+  width:100%;padding:14px 16px;background:transparent;border:0;color:#e5e7eb;font-weight:800;
+  text-align:left;font-size:16px;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent
+}
+.faq-question:focus-visible{outline:2px solid rgba(250,204,21,.65);outline-offset:2px;border-radius:12px}
+.faq-question .dot{width:10px;height:10px;border-radius:999px;background:#facc15;box-shadow:0 0 10px rgba(250,204,21,.35)}
+/* caret: "<" menghadap atas (belum dibuka) */
+.faq-question::after{
+  content:"<";font-weight:800;opacity:.9;transform:rotate(-90deg);transition:transform .2s;display:inline-block
+}
+
+/* Jawaban: animasi pakai max-height + opacity (lebih halus lintas device) */
+.faq-answer{
+  overflow:hidden;
+  max-height:0;                 /* tertutup */
+  opacity:0;
+  padding:0 16px;               /* saat tutup, tanpa padding bawah */
+  border-top:1px solid rgba(148,163,253,.12);
+  transition:max-height 260ms ease, opacity 220ms ease, padding 220ms ease;
+  will-change:max-height,opacity;
+}
+.faq-answer .inner{color:#cbd5e1;font-size:14px;line-height:1.6;padding:12px 0 16px}
+
+/* state terbuka → diisi inline oleh JS: max-height: var(--h) */
+.faq-item.open .faq-answer{
+  opacity:1;
+  padding:0 16px;               /* biar teks tidak loncat */
+}
+.faq-item.open .faq-question::after{transform:rotate(90deg)}
+
+.faq-actions{margin-top:14px;display:flex;justify-content:flex-end}
+.btn-faq-more{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid rgba(250,204,21,.45);
+  color:#111827;background:linear-gradient(90deg,#facc15,#f59e0b);font-weight:800;font-size:12px;text-decoration:none;
+  box-shadow:0 10px 24px rgba(0,0,0,.8);cursor:pointer
+}
+
+@media (max-width:480px){
+  .faq-question{font-size:15px;padding:12px 14px}
+  .faq-answer .inner{font-size:13.5px}
+}
+
+/* aksesibilitas: jika user setel reduce motion, matikan animasi */
+@media (prefers-reduced-motion: reduce){
+  .faq-answer{transition:none}
+}
+/* FAQ Animasi lebih halus */
+.faq-answer, .answer-wrap {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    max-height 0.55s cubic-bezier(.22,1,.36,1),
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+/* Saat dibuka */
+.faq-item.open .faq-answer,
+.faq-item[open] .answer-wrap {
+  max-height: 500px; /* cukup besar agar isi muat */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tambahan efek halus saat hover pertanyaan */
+.faq-question {
+  transition: background-color .25s ease, box-shadow .25s ease;
+}
+.faq-question:hover {
+  background: rgba(250,204,21,0.08);
+  box-shadow: 0 2px 10px rgba(250,204,21,0.2);
+  cursor: pointer;
+}
