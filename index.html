@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="MPK ZONE · Ruang resmi aspirasi & informasi siswa SMP Tunas Harapan." />
   <title>MPK ZONE | SMP Tunas Harapan</title>
 
+  <!-- Favicon (opsional) -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  <!-- Fonts preconnect (opsional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
@@ -13,20 +22,25 @@
   <link rel="stylesheet" href="assets/css/fab-modal.css" />
   <link rel="stylesheet" href="assets/css/galeri.css" />
   <link rel="stylesheet" href="assets/css/loading.css" />
+  <link rel="stylesheet" href="assets/css/public.css" />
+  <!-- FAQ mini styles -->
+  <link rel="stylesheet" href="assets/css/faq.css" />
 </head>
 <body>
   <!-- NAVBAR -->
   <header class="top-nav">
     <div class="brand">
       <span>MPK ZONE</span>
-      <span class="brand-sub">SMP TUNAS HARAPAN</span>
+      <span class="brand-sub">SMP Tunas Harapan</span>
     </div>
     <button class="menu-toggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <nav class="nav-drawer">
+    <nav class="nav-drawer" aria-label="Navigasi utama">
       <a href="#hero">Beranda</a>
       <a href="#struktur">Struktur</a>
+      <!-- Link FAQ di navbar -->
+      <a href="#faq">FAQ</a>
       <a href="#galeri">Galeri</a>
       <a href="aspirasi.html">Aspirasi</a>
     </nav>
@@ -45,7 +59,7 @@
           <span id="typing"></span><span class="cursor">|</span>
         </h1>
 
-        <div class="hero-school">SMP TUNAS HARAPAN</div>
+        <div class="hero-school">SMP Tunas Harapan</div>
 
         <p class="hero-subtitle">
           Ruang resmi informasi dan aspirasi siswa SMP Tunas Harapan.
@@ -92,6 +106,108 @@
       </div>
     </section>
 
+    <!-- ====== FAQ MINI (di atas Galeri) ====== -->
+<section id="faq" class="faq-mini section-fade">
+  <h2>FAQ MPK ZONE</h2>
+  <p class="section-desc">Pertanyaan yang paling sering ditanyain seputar MPK, aspirasi, dan kegiatan.</p>
+
+  <div class="faq-list" id="faqList">
+    <!-- 1 -->
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="faq1" hidden>
+      <label class="faq-question" for="faq1" aria-controls="ans1" aria-expanded="false">
+        <span class="dot"></span><span class="text">Apa itu MPK ZONE?</span>
+      </label>
+      <div class="faq-answer" id="ans1"><div class="inner">
+        MPK ZONE adalah ruang resmi untuk informasi dan penyaluran aspirasi siswa SMP Tunas Harapan.
+        Di sini kamu bisa menyampaikan saran/kritik dengan aman dan tertib.
+      </div></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="faq2" hidden>
+      <label class="faq-question" for="faq2" aria-controls="ans2" aria-expanded="false">
+        <span class="dot"></span><span class="text">Apakah identitas pengirim aspirasi dirahasiakan?</span>
+      </label>
+      <div class="faq-answer" id="ans2"><div class="inner">
+        Ya. Data pengirim tidak dipublikasikan. Identitas hanya digunakan untuk verifikasi internal MPK.
+      </div></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="faq3" hidden>
+      <label class="faq-question" for="faq3" aria-controls="ans3" aria-expanded="false">
+        <span class="dot"></span><span class="text">Berapa lama aspirasi diproses?</span>
+      </label>
+      <div class="faq-answer" id="ans3"><div class="inner">
+        Umumnya 1–7 hari kerja sekolah. Status tindak lanjut akan diumumkan pada kanal resmi MPK/kelas.
+      </div></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="faq-item">
+      <input type="checkbox" class="faq-toggle" id="faq4" hidden>
+      <label class="faq-question" for="faq4" aria-controls="ans4" aria-expanded="false">
+        <span class="dot"></span><span class="text">Bolehkah kirim pesan publik?</span>
+      </label>
+      <div class="faq-answer" id="ans4"><div class="inner">
+        Boleh. Pakai tombol <b>Pesan Publik</b> (ikon 🔊) di kanan bawah untuk kirim dukungan/himbauan.
+        Pesan publik tampil real-time dan bisa dikomentari.
+      </div></div>
+    </div>
+
+    <!-- 5 (disembunyikan awal) -->
+    <div class="faq-item is-hidden">
+      <input type="checkbox" class="faq-toggle" id="faq5" hidden>
+      <label class="faq-question" for="faq5" aria-controls="ans5" aria-expanded="false">
+        <span class="dot"></span><span class="text">Apakah semua aspirasi pasti ditindaklanjuti?</span>
+      </label>
+      <div class="faq-answer" id="ans5"><div class="inner">
+        Semua aspirasi dibaca. Tindak lanjut diprioritaskan berdasar urgensi, kelayakan, dan kebijakan sekolah.
+      </div></div>
+    </div>
+
+    <!-- 6 (disembunyikan awal) -->
+    <div class="faq-item is-hidden">
+      <input type="checkbox" class="faq-toggle" id="faq6" hidden>
+      <label class="faq-question" for="faq6" aria-controls="ans6" aria-expanded="false">
+        <span class="dot"></span><span class="text">Kapan MPK melakukan rapat atau sidang?</span>
+      </label>
+      <div class="faq-answer" id="ans6"><div class="inner">
+        Rutin bulanan dan insidental saat ada isu mendesak. Ringkasan akan dibagikan via wali kelas/kanal resmi.
+      </div></div>
+    </div>
+
+    <!-- 7 (disembunyikan awal) -->
+    <div class="faq-item is-hidden">
+      <input type="checkbox" class="faq-toggle" id="faq7" hidden>
+      <label class="faq-question" for="faq7" aria-controls="ans7" aria-expanded="false">
+        <span class="dot"></span><span class="text">Bagaimana cara bergabung menjadi anggota MPK?</span>
+      </label>
+      <div class="faq-answer" id="ans7"><div class="inner">
+        Pendaftaran dibuka awal tahun ajaran. Pantau pengumuman di MPK ZONE, mading, dan briefing kelas.
+      </div></div>
+    </div>
+
+    <!-- 8 (disembunyikan awal) -->
+    <div class="faq-item is-hidden">
+      <input type="checkbox" class="faq-toggle" id="faq8" hidden>
+      <label class="faq-question" for="faq8" aria-controls="ans8" aria-expanded="false">
+        <span class="dot"></span><span class="text">Siapa pembina dan pengurus inti MPK ZONE?</span>
+      </label>
+      <div class="faq-answer" id="ans8"><div class="inner">
+        Cek bagian <b>Struktur MPK</b> untuk pembina, ketua, wakil, sekretaris, dan bendahara.
+      </div></div>
+    </div>
+  </div>
+
+  <div class="faq-actions">
+    <button id="faqToggleAll" class="btn-faq-more" type="button">Lihat semua FAQ →</button>
+  </div>
+</section>
+
     <!-- GALERI -->
     <section id="galeri" class="galeri section-fade">
       <h2>Galeri Kegiatan</h2>
@@ -102,46 +218,64 @@
       <div class="galeri-slider">
         <div class="galeri-track">
           <!-- 4 foto asli -->
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 1"></div></div>
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 2"></div></div>
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 3"></div></div>
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK 4"></div></div>
+          <div class="galeri-item">
+            <div class="galeri-frame">
+              <img src="img/kegiatan.jpg" alt="Kegiatan MPK 1" loading="lazy">
+            </div>
+          </div>
+          <div class="galeri-item">
+            <div class="galeri-frame">
+              <img src="img/kegiatan.jpg" alt="Kegiatan MPK 2" loading="lazy">
+            </div>
+          </div>
+          <div class="galeri-item">
+            <div class="galeri-frame">
+              <img src="img/kegiatan.jpg" alt="Kegiatan MPK 3" loading="lazy">
+            </div>
+          </div>
+          <div class="galeri-item">
+            <div class="galeri-frame">
+              <img src="img/kegiatan.jpg" alt="Kegiatan MPK 4" loading="lazy">
+            </div>
+          </div>
           <!-- 4 duplikat (loop halus) -->
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
-          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt=""></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK"></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK"></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK"></div></div>
+          <div class="galeri-item"><div class="galeri-frame"><img src="img/kegiatan.jpg" alt="Kegiatan MPK"></div></div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- POPUP BIODATA -->
+  <!-- POPUP BIODATA STRUKTUR -->
   <div class="popup-backdrop" id="popup">
     <div class="popup-card">
-      <div class="popup-photo" id="popupPhoto"></div>
-      <div class="popup-overlay"></div>
-      <div class="popup-close" id="popupClose">✕</div>
+      <div class="popup-photo" id="popupPhoto" aria-hidden="true"></div>
+      <div class="popup-overlay" aria-hidden="true"></div>
+      <div class="popup-close" id="popupClose" aria-label="Tutup">✕</div>
       <div class="popup-motto" id="popupMotto"></div>
     </div>
   </div>
 
   <!-- FAB MENU (IG + PESAN PUBLIK) -->
   <div class="fab-multi">
-    <input type="checkbox" id="fab-toggle" class="fab-checkbox" />
-    <label for="fab-toggle" class="fab-main"></label>
+    <input type="checkbox" id="fab-toggle" class="fab-checkbox" aria-label="Buka menu cepat" />
+    <label for="fab-toggle" class="fab-main" aria-hidden="true"></label>
 
     <a href="https://instagram.com/akun_mpkzone"
        target="_blank"
        class="fab-option fab-instagram"
-       title="Instagram MPK">
-      <span class="fab-ig-box"></span>
+       title="Instagram MPK"
+       rel="noopener noreferrer">
+      <span class="fab-ig-box" aria-hidden="true"></span>
     </a>
 
     <button type="button"
             class="fab-option fab-public"
             id="fabPublic"
-            title="Pesan Publik">
+            title="Pesan Publik"
+            aria-label="Buka Pesan Publik">
       <span class="fab-option-icon">🔊</span>
     </button>
   </div>
@@ -150,17 +284,18 @@
   <button type="button"
           class="fab-aspirasi-main"
           id="fabAspirasiMain"
-          title="Kirim Aspirasi">
+          title="Kirim Aspirasi"
+          aria-label="Buka Form Aspirasi">
     <span class="fab-aspirasi-icon">💬</span>
   </button>
 
   <!-- MODAL ASPIRASI -->
-  <div class="aspirasi-modal" id="aspirasiModal">
-    <div class="aspirasi-card aspirasi-card-wide">
-      <button class="aspirasi-close" id="aspirasiClose">✕</button>
+  <div class="aspirasi-modal" id="aspirasiModal" aria-hidden="true">
+    <div class="aspirasi-card aspirasi-card-wide" role="dialog" aria-modal="true" aria-labelledby="aspirasiTitle">
+      <button class="aspirasi-close" id="aspirasiClose" aria-label="Tutup">✕</button>
 
       <div class="eyebrow">FORM ASPIRASI RESMI</div>
-      <h3>
+      <h3 id="aspirasiTitle">
         Aspirasi Siswa
         <span class="badge">Digital &amp; Rahasia</span>
       </h3>
@@ -169,7 +304,7 @@
         Setiap pesan akan dibaca dan dipertimbangkan langsung oleh MPK.
       </p>
 
-      <form id="aspirasiForm">
+      <form id="aspirasiForm" novalidate>
         <div class="two-col">
           <label>Nama Lengkap
             <div class="field-wrap">
@@ -213,7 +348,7 @@
           </div>
         </label>
 
-        <button type="submit" id="sendBtn">
+        <button type="submit" id="sendBtn" aria-label="Kirim Aspirasi">
           <span class="btn-icon">📨</span>
           <span class="btn-text">Kirim Aspirasi ke MPK</span>
         </button>
@@ -229,40 +364,85 @@
     </div>
   </div>
 
-  <!-- MODAL PESAN PUBLIK -->
-  <div class="aspirasi-modal" id="publicModal">
-    <div class="aspirasi-card aspirasi-card-wide">
-      <button class="aspirasi-close" id="publicClose">✕</button>
+  <!-- MODAL PESAN PUBLIK (CHAT STYLE) -->
+  <div class="aspirasi-modal" id="publicModal" aria-hidden="true">
+    <div class="aspirasi-card aspirasi-card-wide public-chat-card" role="dialog" aria-modal="true" aria-labelledby="publicTitle">
+      <button class="aspirasi-close" id="publicClose" aria-label="Tutup">✕</button>
 
-      <h3>Pesan Publik</h3>
-      <p class="hint">
-        Pesan ini untuk ditampilkan sebagai pesan publik MPK ZONE.
-      </p>
+      <div class="public-chat-header">
+        <div class="public-chat-title" id="publicTitle">Pesan Publik</div>
+        <div class="public-chat-sub">
+          Kirim pesan dukungan, apresiasi, atau himbauan. Tampil anonim & real-time.
+        </div>
+      </div>
 
-      <!-- list pesan publik -->
-      <div id="publicMessagesList" class="public-messages"></div>
+      <!-- AREA LIST PESAN (bubbles) -->
+      <div id="publicMessagesList" class="public-messages-list" aria-live="polite" aria-relevant="additions">
+        <!-- Diisi realtime oleh public.js -->
+      </div>
 
-      <form id="publicForm">
-        <label>Nama / Organisasi
-          <div class="field-wrap">
-            <input type="text" name="nama" placeholder="Contoh: Kelas 9.1 atau Nama Lengkap" required />
-            <div class="field-focus-glow"></div>
-          </div>
-        </label>
-
-        <label>Pesan Publik
-          <div class="field-wrap">
-            <textarea name="pesan" rows="5" placeholder="Tulis pesan publik..." required></textarea>
-            <div class="field-focus-glow"></div>
-          </div>
-        </label>
-
-        <button type="submit">
-          <span class="btn-text">Kirim Pesan Publik</span>
-        </button>
-
+      <!-- FORM INPUT DI BAWAH -->
+      <form id="publicForm" class="public-chat-form" novalidate>
+        <div class="public-name-inline">
+          <input type="text"
+                 name="nama"
+                 placeholder="Nama / Kelas (opsional)"
+                 class="public-input-name" />
+        </div>
+        <div class="public-input-wrap">
+          <textarea name="pesan"
+                    class="public-input-text"
+                    rows="1"
+                    placeholder="Ketik pesan Anda..."
+                    required></textarea>
+          <button type="submit" class="public-send-btn" aria-label="Kirim Pesan Publik">➤</button>
+        </div>
         <p id="publicStatus" class="status"></p>
       </form>
+    </div>
+  </div>
+
+  <!-- POPUP DETAIL PESAN PUBLIK + KOMENTAR -->
+  <div class="public-popup-backdrop" id="publicMsgPopup" aria-hidden="true">
+    <div class="public-popup-card" role="dialog" aria-modal="true" aria-labelledby="popMsgLabel">
+      <button class="public-popup-close" id="publicMsgClose" aria-label="Tutup">✕</button>
+
+      <div class="public-popup-body">
+        <div class="public-popup-label" id="popMsgLabel">Pesan Publik</div>
+        <div class="public-popup-name" id="popupMsgName"></div>
+        <div class="public-popup-text" id="popupMsgText"></div>
+      </div>
+
+      <div class="public-popup-comments-wrap">
+        <div class="public-popup-comments-title">Komentar</div>
+        <div class="public-popup-comments" id="popupComments">
+          <p class="public-empty">Belum ada komentar.</p>
+        </div>
+      </div>
+
+      <form id="popupCommentForm" class="public-popup-comment-form" novalidate>
+        <div class="field-wrap">
+          <input type="text" name="nama" placeholder="Namamu / Kelas (opsional)" />
+        </div>
+        <div class="field-wrap">
+          <textarea name="komentar" rows="2" placeholder="Tulis komentar..." required></textarea>
+        </div>
+        <button type="submit" class="btn-comment-send">Kirim Komentar</button>
+        <p id="popupCommentStatus" class="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOADER ASPIRASI -->
+  <div class="loading-backdrop" id="aspirasiLoading" aria-hidden="true">
+    <div class="loader">
+      <div class="truckWrapper">
+        <div class="truckBody"><!-- SVG di file sebelumnya tetap --></div>
+        <div class="truckTires"></div>
+        <div class="road"></div>
+        <svg class="lampPost"></svg>
+      </div>
+      <div class="loading-label">Mengirim aspirasi ke MPK...</div>
     </div>
   </div>
 
@@ -270,14 +450,20 @@
     <p>© 2025 MPK ZONE · SMP Tunas Harapan · All rights reserved.</p>
   </footer>
 
-  <!-- SCRIPT -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/ui.js"></script>
-  <script src="assets/js/landing.js"></script>
-  <script src="assets/js/form.js"></script>
-  <script src="assets/js/fab-modal.js"></script>
-  <script src="assets/js/struktur.js"></script>
-</script>
+  <!-- SCRIPTS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Firebase compat -->
+  <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+  <!-- Config & logic -->
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/ui.js"></script>
+  <script defer src="assets/js/landing.js"></script>
+  <script defer src="assets/js/form.js"></script>
+  <script defer src="assets/js/fab-modal.js"></script>
+  <script defer src="assets/js/struktur.js"></script>
+  <script defer src="assets/js/public.js"></script>
+  <script defer src="assets/js/faq-mini.js"></script>
 </body>
 </html>
